@@ -3,10 +3,7 @@ package programmers;
 import java.lang.reflect.AnnotatedArrayType;
 import java.util.*;
 
-class Word {
-    String word;
-    int count;
-}
+
 public class changeword {
     //작은수 찾기
     static int answer = Integer.MAX_VALUE;
@@ -36,7 +33,7 @@ public class changeword {
         return false;
     }
     static void dfs(String[] words, String begin, String target, boolean[] visited, int count) {
-        Queue<Word> pq = new PriorityQueue<>((o1, o2) -> o1.count - o2.count);
+
         if(begin.equals(target)) {
             if(answer>= count) answer = count;
             return;
@@ -47,7 +44,6 @@ public class changeword {
                 visited[i] = true;
                 dfs(words, words[i], target, visited, count+1);
                 visited[i] = false;
-//                System.out.println("i: "+ i+"count" + count);
             }
         }
     }
