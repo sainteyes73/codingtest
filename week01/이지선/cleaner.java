@@ -23,7 +23,6 @@ public class cleaner {
             String[] str3 = br.readLine().split(" ");
             for(int j=0; j<M; j++) {
                 map[i][j] = Integer.parseInt(str3[j]);
-
             }
         }
         clean(r, c, d);
